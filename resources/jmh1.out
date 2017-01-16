@@ -1,0 +1,3285 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -classpath /Users/korektur/Documents/work/externalSort/target/classes:/Users/korektur/.m2/repository/org/openjdk/jmh/jmh-core/1.17.3/jmh-core-1.17.3.jar:/Users/korektur/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/Users/korektur/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/Users/korektur/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.17.3/jmh-generator-annprocess-1.17.3.jar org.openjdk.jmh.Main com.ifmo.ctddev.ExternalSortTest.sort
+# JMH 1.17.3 (released 33 days ago)
+# VM version: JDK 1.8.0_112, VM 25.112-b16
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 20 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.ifmo.ctddev.ExternalSortTest.sort
+
+# Run progress: 0.00% complete, ETA 00:06:40
+# Fork: 1 of 10
+# Warmup Iteration   1: 351.030 ops/s
+# Warmup Iteration   2: 874.764 ops/s
+# Warmup Iteration   3: 1418.746 ops/s
+# Warmup Iteration   4: 1366.314 ops/s
+# Warmup Iteration   5: 1808.623 ops/s
+# Warmup Iteration   6: 1942.849 ops/s
+# Warmup Iteration   7: 2207.138 ops/s
+# Warmup Iteration   8: 2206.088 ops/s
+# Warmup Iteration   9: 2055.160 ops/s
+# Warmup Iteration  10: 2041.485 ops/s
+# Warmup Iteration  11: 2269.922 ops/s
+# Warmup Iteration  12: 2146.366 ops/s
+# Warmup Iteration  13: 1716.818 ops/s
+# Warmup Iteration  14: 2403.842 ops/s
+# Warmup Iteration  15: 2246.557 ops/s
+# Warmup Iteration  16: 2371.692 ops/s
+# Warmup Iteration  17: 2288.167 ops/s
+# Warmup Iteration  18: 1870.412 ops/s
+# Warmup Iteration  19: 2386.599 ops/s
+# Warmup Iteration  20: 2254.022 ops/s
+Iteration   1: 1966.491 ops/s
+Iteration   2: 2335.323 ops/s
+Iteration   3: 2395.508 ops/s
+Iteration   4: 2378.307 ops/s
+Iteration   5: 2534.253 ops/s
+Iteration   6: 2312.107 ops/s
+Iteration   7: 1844.156 ops/s
+Iteration   8: 2324.402 ops/s
+Iteration   9: 2345.047 ops/s
+Iteration  10: 1972.459 ops/s
+Iteration  11: 2338.772 ops/s
+Iteration  12: 2511.755 ops/s
+Iteration  13: 2245.167 ops/s
+Iteration  14: 2371.776 ops/s
+Iteration  15: 2174.911 ops/s
+Iteration  16: 2453.424 ops/s
+Iteration  17: 2413.950 ops/s
+Iteration  18: 2400.079 ops/s
+Iteration  19: 1908.107 ops/s
+Iteration  20: 1521.354 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 10.00% complete, ETA 00:12:53
+# Fork: 2 of 10
+# Warmup Iteration   1: 1144.300 ops/s
+# Warmup Iteration   2: 1822.929 ops/s
+# Warmup Iteration   3: 1569.736 ops/s
+# Warmup Iteration   4: 1609.801 ops/s
+# Warmup Iteration   5: 1834.522 ops/s
+# Warmup Iteration   6: 1831.640 ops/s
+# Warmup Iteration   7: 2157.367 ops/s
+# Warmup Iteration   8: 1984.969 ops/s
+# Warmup Iteration   9: 1831.184 ops/s
+# Warmup Iteration  10: 2238.466 ops/s
+# Warmup Iteration  11: 1826.279 ops/s
+# Warmup Iteration  12: 966.010 ops/s
+# Warmup Iteration  13: 1675.105 ops/s
+# Warmup Iteration  14: 1635.371 ops/s
+# Warmup Iteration  15: 2182.761 ops/s
+# Warmup Iteration  16: 1979.133 ops/s
+# Warmup Iteration  17: 2328.247 ops/s
+# Warmup Iteration  18: 1959.753 ops/s
+# Warmup Iteration  19: 1795.617 ops/s
+# Warmup Iteration  20: 2319.867 ops/s
+Iteration   1: 2425.833 ops/s
+Iteration   2: 2352.803 ops/s
+Iteration   3: 2313.722 ops/s
+Iteration   4: 1898.439 ops/s
+Iteration   5: 1944.162 ops/s
+Iteration   6: 2251.122 ops/s
+Iteration   7: 2104.980 ops/s
+Iteration   8: 2112.763 ops/s
+Iteration   9: 2380.854 ops/s
+Iteration  10: 2229.984 ops/s
+Iteration  11: 2067.936 ops/s
+Iteration  12: 2128.696 ops/s
+Iteration  13: 2308.270 ops/s
+Iteration  14: 2306.979 ops/s
+Iteration  15: 2208.753 ops/s
+Iteration  16: 2143.597 ops/s
+Iteration  17: 2086.483 ops/s
+Iteration  18: 2305.323 ops/s
+Iteration  19: 2288.286 ops/s
+Iteration  20: 2140.368 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 20.00% complete, ETA 00:11:27
+# Fork: 3 of 10
+# Warmup Iteration   1: 403.207 ops/s
+# Warmup Iteration   2: 844.012 ops/s
+# Warmup Iteration   3: 1335.410 ops/s
+# Warmup Iteration   4: 1471.742 ops/s
+# Warmup Iteration   5: 2174.212 ops/s
+# Warmup Iteration   6: 2037.887 ops/s
+# Warmup Iteration   7: 1993.786 ops/s
+# Warmup Iteration   8: 2190.069 ops/s
+# Warmup Iteration   9: 2493.237 ops/s
+# Warmup Iteration  10: 2324.642 ops/s
+# Warmup Iteration  11: 2419.585 ops/s
+# Warmup Iteration  12: 2528.326 ops/s
+# Warmup Iteration  13: 2494.135 ops/s
+# Warmup Iteration  14: 2312.085 ops/s
+# Warmup Iteration  15: 2484.794 ops/s
+# Warmup Iteration  16: 2527.117 ops/s
+# Warmup Iteration  17: 2378.836 ops/s
+# Warmup Iteration  18: 2508.009 ops/s
+# Warmup Iteration  19: 2601.919 ops/s
+# Warmup Iteration  20: 2450.658 ops/s
+Iteration   1: 2593.904 ops/s
+Iteration   2: 2697.389 ops/s
+Iteration   3: 2537.199 ops/s
+Iteration   4: 2433.670 ops/s
+Iteration   5: 2379.298 ops/s
+Iteration   6: 2323.091 ops/s
+Iteration   7: 2485.706 ops/s
+Iteration   8: 2341.311 ops/s
+Iteration   9: 2324.000 ops/s
+Iteration  10: 2207.442 ops/s
+Iteration  11: 2315.282 ops/s
+Iteration  12: 2468.329 ops/s
+Iteration  13: 2602.749 ops/s
+Iteration  14: 2386.866 ops/s
+Iteration  15: 2508.380 ops/s
+Iteration  16: 2582.291 ops/s
+Iteration  17: 2570.255 ops/s
+Iteration  18: 2525.114 ops/s
+Iteration  19: 2416.444 ops/s
+Iteration  20: 2612.394 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 30.00% complete, ETA 00:10:01
+# Fork: 4 of 10
+# Warmup Iteration   1: 65.105 ops/s
+# Warmup Iteration   2: 487.531 ops/s
+# Warmup Iteration   3: 681.085 ops/s
+# Warmup Iteration   4: 839.352 ops/s
+# Warmup Iteration   5: 1082.600 ops/s
+# Warmup Iteration   6: 908.049 ops/s
+# Warmup Iteration   7: 1606.096 ops/s
+# Warmup Iteration   8: 1868.392 ops/s
+# Warmup Iteration   9: 2458.989 ops/s
+# Warmup Iteration  10: 2592.792 ops/s
+# Warmup Iteration  11: 2263.452 ops/s
+# Warmup Iteration  12: 2284.760 ops/s
+# Warmup Iteration  13: 1743.358 ops/s
+# Warmup Iteration  14: 916.797 ops/s
+# Warmup Iteration  15: 1659.890 ops/s
+# Warmup Iteration  16: 2351.186 ops/s
+# Warmup Iteration  17: 2311.197 ops/s
+# Warmup Iteration  18: 1035.470 ops/s
+# Warmup Iteration  19: 1361.301 ops/s
+# Warmup Iteration  20: 1886.848 ops/s
+Iteration   1: 2180.462 ops/s
+Iteration   2: 1404.122 ops/s
+Iteration   3: 1488.679 ops/s
+Iteration   4: 780.815 ops/s
+Iteration   5: 1570.759 ops/s
+Iteration   6: 1012.734 ops/s
+Iteration   7: 1166.859 ops/s
+Iteration   8: 1229.395 ops/s
+Iteration   9: 1410.607 ops/s
+Iteration  10: 1734.464 ops/s
+Iteration  11: 1929.319 ops/s
+Iteration  12: 2553.926 ops/s
+Iteration  13: 2401.716 ops/s
+Iteration  14: 2344.452 ops/s
+Iteration  15: 1894.952 ops/s
+Iteration  16: 1537.572 ops/s
+Iteration  17: 2126.825 ops/s
+Iteration  18: 1404.942 ops/s
+Iteration  19: 1953.530 ops/s
+Iteration  20: 934.962 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 40.00% complete, ETA 00:08:35
+# Fork: 5 of 10
+# Warmup Iteration   1: 1224.836 ops/s
+# Warmup Iteration   2: 1852.557 ops/s
+# Warmup Iteration   3: 1903.198 ops/s
+# Warmup Iteration   4: 2687.921 ops/s
+# Warmup Iteration   5: 2869.804 ops/s
+# Warmup Iteration   6: 2738.261 ops/s
+# Warmup Iteration   7: 2711.460 ops/s
+# Warmup Iteration   8: 1966.094 ops/s
+# Warmup Iteration   9: 2806.691 ops/s
+# Warmup Iteration  10: 2612.315 ops/s
+# Warmup Iteration  11: 2502.276 ops/s
+# Warmup Iteration  12: 1911.582 ops/s
+# Warmup Iteration  13: 2793.678 ops/s
+# Warmup Iteration  14: 2915.973 ops/s
+# Warmup Iteration  15: 2938.741 ops/s
+# Warmup Iteration  16: 2953.420 ops/s
+# Warmup Iteration  17: 2938.582 ops/s
+# Warmup Iteration  18: 2973.215 ops/s
+# Warmup Iteration  19: 2642.991 ops/s
+# Warmup Iteration  20: 2852.708 ops/s
+Iteration   1: 2675.338 ops/s
+Iteration   2: 2370.940 ops/s
+Iteration   3: 2642.769 ops/s
+Iteration   4: 2824.079 ops/s
+Iteration   5: 2998.606 ops/s
+Iteration   6: 2968.944 ops/s
+Iteration   7: 2766.176 ops/s
+Iteration   8: 3051.967 ops/s
+Iteration   9: 2923.770 ops/s
+Iteration  10: 3091.318 ops/s
+Iteration  11: 2791.978 ops/s
+Iteration  12: 1462.255 ops/s
+Iteration  13: 745.322 ops/s
+Iteration  14: 2052.066 ops/s
+Iteration  15: 2359.292 ops/s
+Iteration  16: 2419.511 ops/s
+Iteration  17: 2400.193 ops/s
+Iteration  18: 2384.965 ops/s
+Iteration  19: 2405.664 ops/s
+Iteration  20: 1923.762 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 50.00% complete, ETA 00:07:09
+# Fork: 6 of 10
+# Warmup Iteration   1: 1184.640 ops/s
+# Warmup Iteration   2: 1922.861 ops/s
+# Warmup Iteration   3: 1746.994 ops/s
+# Warmup Iteration   4: 2727.572 ops/s
+# Warmup Iteration   5: 2722.911 ops/s
+# Warmup Iteration   6: 2585.571 ops/s
+# Warmup Iteration   7: 2425.374 ops/s
+# Warmup Iteration   8: 2432.023 ops/s
+# Warmup Iteration   9: 2200.527 ops/s
+# Warmup Iteration  10: 2393.526 ops/s
+# Warmup Iteration  11: 2158.956 ops/s
+# Warmup Iteration  12: 2261.070 ops/s
+# Warmup Iteration  13: 2451.449 ops/s
+# Warmup Iteration  14: 2466.612 ops/s
+# Warmup Iteration  15: 2432.215 ops/s
+# Warmup Iteration  16: 2393.932 ops/s
+# Warmup Iteration  17: 2151.932 ops/s
+# Warmup Iteration  18: 2779.382 ops/s
+# Warmup Iteration  19: 2496.672 ops/s
+# Warmup Iteration  20: 2454.733 ops/s
+Iteration   1: 2412.334 ops/s
+Iteration   2: 2409.019 ops/s
+Iteration   3: 2147.764 ops/s
+Iteration   4: 2279.318 ops/s
+Iteration   5: 2537.470 ops/s
+Iteration   6: 2008.369 ops/s
+Iteration   7: 2452.302 ops/s
+Iteration   8: 1857.831 ops/s
+Iteration   9: 770.226 ops/s
+Iteration  10: 1568.336 ops/s
+Iteration  11: 2383.477 ops/s
+Iteration  12: 2419.534 ops/s
+Iteration  13: 2087.149 ops/s
+Iteration  14: 2023.255 ops/s
+Iteration  15: 2059.799 ops/s
+Iteration  16: 2100.853 ops/s
+Iteration  17: 2353.031 ops/s
+Iteration  18: 2473.487 ops/s
+Iteration  19: 2481.594 ops/s
+Iteration  20: 2378.806 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 60.00% complete, ETA 00:05:43
+# Fork: 7 of 10
+# Warmup Iteration   1: 1429.486 ops/s
+# Warmup Iteration   2: 1996.743 ops/s
+# Warmup Iteration   3: 1765.483 ops/s
+# Warmup Iteration   4: 2451.580 ops/s
+# Warmup Iteration   5: 2402.556 ops/s
+# Warmup Iteration   6: 2186.846 ops/s
+# Warmup Iteration   7: 2300.660 ops/s
+# Warmup Iteration   8: 2387.774 ops/s
+# Warmup Iteration   9: 2208.039 ops/s
+# Warmup Iteration  10: 2360.313 ops/s
+# Warmup Iteration  11: 2516.885 ops/s
+# Warmup Iteration  12: 2427.946 ops/s
+# Warmup Iteration  13: 2494.810 ops/s
+# Warmup Iteration  14: 2451.086 ops/s
+# Warmup Iteration  15: 2482.092 ops/s
+# Warmup Iteration  16: 2596.928 ops/s
+# Warmup Iteration  17: 2573.957 ops/s
+# Warmup Iteration  18: 2465.678 ops/s
+# Warmup Iteration  19: 2423.982 ops/s
+# Warmup Iteration  20: 2561.995 ops/s
+Iteration   1: 2505.948 ops/s
+Iteration   2: 2567.453 ops/s
+Iteration   3: 2626.385 ops/s
+Iteration   4: 2607.155 ops/s
+Iteration   5: 2615.411 ops/s
+Iteration   6: 2536.819 ops/s
+Iteration   7: 2363.826 ops/s
+Iteration   8: 2388.944 ops/s
+Iteration   9: 2472.057 ops/s
+Iteration  10: 2553.001 ops/s
+Iteration  11: 2420.640 ops/s
+Iteration  12: 2508.773 ops/s
+Iteration  13: 2618.651 ops/s
+Iteration  14: 2511.676 ops/s
+Iteration  15: 2443.945 ops/s
+Iteration  16: 2596.820 ops/s
+Iteration  17: 2534.290 ops/s
+Iteration  18: 2471.533 ops/s
+Iteration  19: 2437.988 ops/s
+Iteration  20: 2471.886 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 70.00% complete, ETA 00:04:17
+# Fork: 8 of 10
+# Warmup Iteration   1: 1660.232 ops/s
+# Warmup Iteration   2: 2105.734 ops/s
+# Warmup Iteration   3: 2091.413 ops/s
+# Warmup Iteration   4: 2279.583 ops/s
+# Warmup Iteration   5: 2588.251 ops/s
+# Warmup Iteration   6: 2581.420 ops/s
+# Warmup Iteration   7: 2466.423 ops/s
+# Warmup Iteration   8: 2315.043 ops/s
+# Warmup Iteration   9: 2504.673 ops/s
+# Warmup Iteration  10: 2517.349 ops/s
+# Warmup Iteration  11: 2523.208 ops/s
+# Warmup Iteration  12: 2572.377 ops/s
+# Warmup Iteration  13: 2509.520 ops/s
+# Warmup Iteration  14: 2533.192 ops/s
+# Warmup Iteration  15: 2481.472 ops/s
+# Warmup Iteration  16: 2517.704 ops/s
+# Warmup Iteration  17: 2551.230 ops/s
+# Warmup Iteration  18: 2454.042 ops/s
+# Warmup Iteration  19: 2450.461 ops/s
+# Warmup Iteration  20: 2516.621 ops/s
+Iteration   1: 2593.234 ops/s
+Iteration   2: 2531.235 ops/s
+Iteration   3: 2546.948 ops/s
+Iteration   4: 2522.462 ops/s
+Iteration   5: 2583.520 ops/s
+Iteration   6: 2582.597 ops/s
+Iteration   7: 2374.766 ops/s
+Iteration   8: 2475.677 ops/s
+Iteration   9: 2498.512 ops/s
+Iteration  10: 2469.801 ops/s
+Iteration  11: 2565.718 ops/s
+Iteration  12: 2589.008 ops/s
+Iteration  13: 2563.182 ops/s
+Iteration  14: 2485.834 ops/s
+Iteration  15: 2551.175 ops/s
+Iteration  16: 2485.375 ops/s
+Iteration  17: 2693.441 ops/s
+Iteration  18: 2472.612 ops/s
+Iteration  19: 2454.747 ops/s
+Iteration  20: 2515.056 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 80.00% complete, ETA 00:02:51
+# Fork: 9 of 10
+# Warmup Iteration   1: 542.353 ops/s
+# Warmup Iteration   2: 631.430 ops/s
+# Warmup Iteration   3: 595.603 ops/s
+# Warmup Iteration   4: 546.158 ops/s
+# Warmup Iteration   5: 637.003 ops/s
+# Warmup Iteration   6: 275.988 ops/s
+# Warmup Iteration   7: 322.094 ops/s
+# Warmup Iteration   8: 364.404 ops/s
+# Warmup Iteration   9: 560.137 ops/s
+# Warmup Iteration  10: 444.284 ops/s
+# Warmup Iteration  11: 727.268 ops/s
+# Warmup Iteration  12: 1461.197 ops/s
+# Warmup Iteration  13: 2273.048 ops/s
+# Warmup Iteration  14: 2344.775 ops/s
+# Warmup Iteration  15: 2359.617 ops/s
+# Warmup Iteration  16: 2196.943 ops/s
+# Warmup Iteration  17: 2444.838 ops/s
+# Warmup Iteration  18: 2444.566 ops/s
+# Warmup Iteration  19: 1683.866 ops/s
+# Warmup Iteration  20: 1459.274 ops/s
+Iteration   1: 2059.402 ops/s
+Iteration   2: 2614.508 ops/s
+Iteration   3: 2650.230 ops/s
+Iteration   4: 2760.557 ops/s
+Iteration   5: 2564.584 ops/s
+Iteration   6: 1403.209 ops/s
+Iteration   7: 2549.642 ops/s
+Iteration   8: 2742.728 ops/s
+Iteration   9: 2786.341 ops/s
+Iteration  10: 2814.459 ops/s
+Iteration  11: 2710.830 ops/s
+Iteration  12: 2626.374 ops/s
+Iteration  13: 2153.925 ops/s
+Iteration  14: 2830.292 ops/s
+Iteration  15: 2829.022 ops/s
+Iteration  16: 2920.679 ops/s
+Iteration  17: 2735.210 ops/s
+Iteration  18: 2602.652 ops/s
+Iteration  19: 2839.316 ops/s
+Iteration  20: 2583.924 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+# Run progress: 90.00% complete, ETA 00:01:25
+# Fork: 10 of 10
+# Warmup Iteration   1: 720.987 ops/s
+# Warmup Iteration   2: 1157.142 ops/s
+# Warmup Iteration   3: 1591.370 ops/s
+# Warmup Iteration   4: 1813.069 ops/s
+# Warmup Iteration   5: 2157.052 ops/s
+# Warmup Iteration   6: 2384.562 ops/s
+# Warmup Iteration   7: 2228.196 ops/s
+# Warmup Iteration   8: 2333.089 ops/s
+# Warmup Iteration   9: 2296.917 ops/s
+# Warmup Iteration  10: 2244.704 ops/s
+# Warmup Iteration  11: 2548.767 ops/s
+# Warmup Iteration  12: 2367.298 ops/s
+# Warmup Iteration  13: 2255.728 ops/s
+# Warmup Iteration  14: 2545.814 ops/s
+# Warmup Iteration  15: 2467.467 ops/s
+# Warmup Iteration  16: 2523.080 ops/s
+# Warmup Iteration  17: 2481.994 ops/s
+# Warmup Iteration  18: 2560.842 ops/s
+# Warmup Iteration  19: 2511.031 ops/s
+# Warmup Iteration  20: 2453.007 ops/s
+Iteration   1: 2470.136 ops/s
+Iteration   2: 2514.433 ops/s
+Iteration   3: 2590.278 ops/s
+Iteration   4: 2586.029 ops/s
+Iteration   5: 2458.739 ops/s
+Iteration   6: 2571.182 ops/s
+Iteration   7: 2423.615 ops/s
+Iteration   8: 2592.835 ops/s
+Iteration   9: 2524.704 ops/s
+Iteration  10: 2560.566 ops/s
+Iteration  11: 2621.358 ops/s
+Iteration  12: 2392.602 ops/s
+Iteration  13: 2386.691 ops/s
+Iteration  14: 2511.686 ops/s
+Iteration  15: 2495.906 ops/s
+Iteration  16: 2422.855 ops/s
+Iteration  17: 2410.290 ops/s
+Iteration  18: 2489.377 ops/s
+Iteration  19: 2547.147 ops/s
+Iteration  20: 2569.769 ops/s
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+
+Non-finished threads:
+
+Thread[pool-2-thread-1,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-4,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[DestroyJavaVM,5,main]
+
+Thread[pool-2-thread-3,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+Thread[pool-2-thread-2,5,main]
+  at sun.misc.Unsafe.park(Native Method)
+  at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+  at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  at java.lang.Thread.run(Thread.java:745)
+
+
+<shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+
+
+Result "sort":
+  2331.540 ±(99.9%) 96.914 ops/s [Average]
+  (min, avg, max) = (745.322, 2331.540, 3091.318), stdev = 410.339
+  CI (99.9%): [2234.626, 2428.454] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:14:18
+
+Benchmark               Mode  Cnt     Score    Error  Units
+ExternalSortTest.sort  thrpt  200  2331.540 ± 96.914  ops/s
+
+Process finished with exit code 0
