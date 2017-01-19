@@ -17,7 +17,7 @@ import java.util.Queue;
 class ExternalArray implements AutoCloseable, Comparable<ExternalArray> {
 
     private final BufferedReader reader;
-    private final Queue<Long> buffer;
+    private Queue<Long> buffer;
     private boolean ended;
 
     ExternalArray(File file) {
@@ -37,6 +37,7 @@ class ExternalArray implements AutoCloseable, Comparable<ExternalArray> {
         while (!ended && queue.size() < ExternalSort.BUFFER_SIZE && (line = reader.readLine()) != null) {
             queue.add(Long.parseLong(line));
         }
+
         this.ended = line == null;
         return queue;
     }
@@ -44,12 +45,15 @@ class ExternalArray implements AutoCloseable, Comparable<ExternalArray> {
     @Nullable
     Long poll() throws IOException {
         if (!ended && buffer.isEmpty()) {
-            fillBuffer();
+            buffer = fillBuffer();
         }
         return buffer.poll();
     }
 
-    boolean isEmpty() {
+    boolean isEmpty() throws IOException {
+        if (!ended && buffer.isEmpty()) {
+            buffer = fillBuffer();
+        }
         return buffer.isEmpty();
     }
 
