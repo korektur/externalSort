@@ -71,7 +71,7 @@ public class ExternalSortUnitTest {
 
     @Test
     public void sortSmallFileLimit() throws Exception {
-        runtTest(4096, 2, 4000, 10000);
+        runtTest(4096, 3, 4000, 10000);
     }
 
 

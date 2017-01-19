@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class ExternalSortBenchmark {
     private static final Random RANDOM = new Random();
-    private static final int FILE_SIZE = 1000;
+    private static final int FILE_SIZE = 1000000;
 
     @State(Scope.Benchmark)
     public static class BenchmarkState {
@@ -35,10 +35,11 @@ public class ExternalSortBenchmark {
         }
     }
 
-    @Benchmark
-    @Warmup(iterations = 0)
-    @Measurement(iterations = 1)
+    @Benchmark()
+    @Warmup(iterations = 10)
+    @Measurement(iterations = 5)
     @Fork(value = 1)
+    @BenchmarkMode(Mode.AverageTime)
     public void sort(BenchmarkState benchmarkState) throws Exception {
         ExternalSort.sort(benchmarkState.IN_FILE, new File("resources/test/out.txt"),
                 "resources/test/");

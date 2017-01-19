@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
  */
 public class ExternalSort {
 
-    static int BUFFER_SIZE = 4096;
-    static int FILES_LIMIT = 200;
-    static int CHUNK_SIZE = 4000;
+    static int BUFFER_SIZE = 4 * 1024 * 8;
+    static int FILES_LIMIT = 100000;
+    static int CHUNK_SIZE = 4 * 1024 * 8;
 
     private static void writeChunk(List<Long> data, Writer writer) throws IOException {
         Collections.sort(data);
@@ -27,7 +27,7 @@ public class ExternalSort {
         String line;
         int fileCount = 0;
         File curFile = new File(tempDirectory + "temp" + (++fileCount));
-        BufferedWriter chunkWriter = new BufferedWriter(new FileWriter(curFile));
+        BufferedWriter chunkWriter = new BufferedWriter(new FileWriter(curFile), BUFFER_SIZE);
         List<Long> curChunk = new ArrayList<>(CHUNK_SIZE);
         while((line = bufferedReader.readLine()) != null) {
             curChunk.add(Long.parseLong(line));
@@ -36,15 +36,18 @@ public class ExternalSort {
                 chunkWriter.close();
                 files.add(curFile);
 
-                if (files.size() >= FILES_LIMIT) {
+                if (files.size() >= FILES_LIMIT - 1) {
                     File newChunk = new File(tempDirectory + "temp" + (++fileCount));
-                    sort(files, newChunk);
+                    merge(files, newChunk);
+                    for (File file : files) {
+                        file.delete();
+                    }
                     files.clear();
                     files.add(newChunk);
                 }
 
                 curFile = new File(tempDirectory + "temp" + (++fileCount));
-                chunkWriter = new BufferedWriter(new FileWriter(curFile));
+                chunkWriter = new BufferedWriter(new FileWriter(curFile), BUFFER_SIZE);
                 curChunk = new ArrayList<>(CHUNK_SIZE);
             }
         }
@@ -55,16 +58,16 @@ public class ExternalSort {
             files.add(curFile);
         }
 
-        sort(files, outputFile);
+        merge(files, outputFile);
     }
 
-    private static void sort(Collection<File> chunkFilePaths, File resultFilePath) throws Exception {
+    private static void merge(Collection<File> chunkFilePaths, File resultFilePath) throws Exception {
         List<ExternalArray> collect = chunkFilePaths.stream()
                 .map(ExternalArray::new)
                 .collect(Collectors.toList());
         PriorityQueue<ExternalArray> queue = new PriorityQueue<>(collect);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(resultFilePath))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(resultFilePath), BUFFER_SIZE)) {
 
             while (!queue.isEmpty()) {
                 ExternalArray cur = queue.poll();
